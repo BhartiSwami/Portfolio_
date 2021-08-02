@@ -34,7 +34,7 @@ body {
     0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
     0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
     0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
-    0 20px 20px rgba(0, 0, 0, 0.15);
+    0 20px 20px rgba(0, 0, 0, 0.15); /* 3-D text from mark dotto 3d text*/
 }
 .profile_pic {
   position: absolute;
@@ -76,12 +76,12 @@ section div {
   font-size: 30px;
 }
 .wrap:hover {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg); /*to show the next div*/
   cursor: pointer;
 }
 .wrap {
   transition: 1s;
-  transform-style: preserve-3d;
+  transform-style: preserve-3d; /*Specifies that child elements will preserve its 3D position*/
 }
 section {
   perspective: 800px;
@@ -141,10 +141,12 @@ figure {
   backface-visibility: hidden;
 }
 .side-a {
-  z-index: 1;
+  z-index: 1; /*to prioritize the first div*/
 }
 .side-b {
-  transform: rotateY(180deg);
+  transform: rotateY(
+    180deg
+  ); /*so that this div does not appear with first side*/
   text-align: center;
   font-size: 30px;
 }
@@ -163,7 +165,7 @@ figure {
   border-radius: 50%;
 }
 .float {
-  float: left;
+  float: left; /*to align this in left side and move out from the normal flow*/
   margin-top: 40px;
   margin-left: 40px;
   margin-right: 350px;
