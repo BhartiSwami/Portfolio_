@@ -1,66 +1,171 @@
+/*google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
-body {
-  background-image: url(./Images/body\ background.jpg);
+html {
+  scroll-behavior: smooth;
 }
-.icon {
-  position: absolute;
-  top: 467px;
-  height: 50px;
-  width: 75px;
+/* all similar content */
+section {
+  padding: 40px 0;
 }
-.bg1 {
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+.about,
+.services,
+.skills,
+.teams,
+.contact,
+footer {
+  font-family: "Poppins", sans-serif;
+}
+.about .about-content,
+.services .serv-content,
+.skills .skills-content,
+.contact .contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+section .title {
   position: relative;
-  top: 0;
-  left: 0;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: "Ubuntu", sans-serif;
 }
-.designamtion {
+section .title::before {
+  content: "";
   position: absolute;
-  top: 240px;
-  left: 380px;
-  color: rgb(240, 253, 211);
-  font-size: 35px;
-  font-weight: 56;
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  background: #111;
+  transform: translateX(-50%);
 }
-.name {
+section .title::after {
   position: absolute;
-  top: 140px;
-  left: 380px;
-  color: rgb(240, 253, 211);
-  font-size: 80px;
-  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
-    0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
-    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
-    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
-    0 20px 20px rgba(0, 0, 0, 0.15); /* 3-D text from mark dotto 3d text*/
+  bottom: -8px;
+  left: 50%;
+  font-size: 20px;
+  color: crimson;
+  padding: 0 5px;
+  background: #fff;
+  transform: translateX(-50%);
 }
-.profile_pic {
-  position: absolute;
-  top: 100px;
-  left: 60px;
-  border-radius: 50%;
+
+/* navbar*/
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  padding: 30px 0;
+  font-family: "Ubuntu", sans-serif;
+  transition: all 0.3s ease;
 }
 .navbar {
-  min-height: 55px;
-  background-color: rgb(33, 33, 37);
+  padding: 15px 0;
+  background-color: rgba(255, 83, 118, 0.5);
 }
-.head1 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  background-color: rgb(33, 33, 37);
-  color: rgb(240, 253, 211);
-  font-size: 50px;
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a {
+  color: crimson;
+  font-size: 35px;
+  font-weight: 600;
+}
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+.navbar .menu li a {
+  display: block;
+  color: #fff;
+  font-size: 18px;
   font-weight: 500;
-  text-align: center;
+  margin-left: 25px;
+  transition: color 0.3s ease;
 }
-section div {
+.navbar .menu li a:hover {
+  color: crimson;
+}
+
+/* home*/
+.home {
+  display: flex;
+  background: url("images/pp1.jpeg") no-repeat center;
+  height: 100vh;
+  color: crimson;
+  min-height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Ubuntu", sans-serif;
+}
+.home .max-width {
+  width: 100%;
+  display: flex;
+}
+.home .max-width .row {
+  margin-right: 0;
+}
+.home .home-content .text-1 {
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+.home .home-content .text-2 {
+  font-size: 40px;
+  margin: 5px 0;
+}
+.home .home-content a {
+  display: inline-block;
+  background: crimson;
+  color: #fff;
+  font-size: 25px;
+  padding: 12px 36px;
+  margin-top: 20px;
+  font-weight: 400;
+  border-radius: 6px;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+.home .home-content a:hover {
+  color: crimson;
+  background: none;
+}
+
+/* education section  */
+aside {
+  perspective: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+aside div {
   height: 300px;
-  width: 400px;
-  border: 1px solid #ccc;
-  font-size: 2.5rem;
+  width: 500px;
   margin: 0px auto;
+  justify-content: space-between;
+}
+aside div img {
+  height: 300px;
+  width: 500px;
 }
 .side-a,
 .side-b {
@@ -72,24 +177,36 @@ section div {
 }
 .side-b {
   transform: rotateY(180deg);
-  text-align: center;
-  font-size: 30px;
-}
-.wrap:hover {
-  transform: rotateY(180deg); /*to show the next div*/
-  cursor: pointer;
+  font-size: 1.5rem;
+  background-color: palegoldenrod;
+  padding: 16px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .wrap {
   transition: 1s;
-  transform-style: preserve-3d; /*Specifies that child elements will preserve its 3D position*/
+  transform-style: preserve-3d;
 }
-section {
-  perspective: 800px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
+.wrap:hover {
+  transform: rotateY(180deg);
+  cursor: pointer;
 }
-aside div {
+/* skills section styling */
+
+.edu .title::after {
+  content: "By Now";
+}
+/*social media*/
+.icon {
+  position: absolute;
+  top: 880px;
+  height: 50px;
+  width: 75px;
+}
+/* Project section*/
+.teams .title::after {
+  content: "My Major Projects";
+}
+figure div {
   height: 75px;
   width: 10%;
   background-color: crimson;
@@ -97,76 +214,66 @@ aside div {
   transition: 2s;
   margin-bottom: 12px;
 }
-aside div:nth-of-type(1) {
+figure div:nth-of-type(1) {
   transition-timing-function: ease-in;
 }
-aside div:nth-of-type(2) {
+figure div:nth-of-type(2) {
   transition-timing-function: ease-out;
 }
-aside div:nth-of-type(3) {
+figure div:nth-of-type(3) {
   transition-timing-function: easeInOutCubic;
 }
-aside:hover div {
+figure:hover div {
   width: 100%;
   text-align: center;
   font-size: 50px;
   font-weight: 500;
   color: rgb(19, 18, 29);
 }
-
-figure div {
-  height: 75px;
-  background-color: cyan;
-  border: 2px solid black;
-  transition: 2s;
-  margin-bottom: 12px;
-  width: 230px;
-  height: 230px;
-  margin: 0px auto;
-  border-radius: 50%;
+/* contact section */
+.contact .title::after {
+  content: "get in touch";
+}
+.btn {
+  background-color: crimson;
+  border: none;
+  color: white;
+  padding: 16px 32px;
   text-align: center;
-  vertical-align: middle;
-  line-height: 230px;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.3s;
 }
-figure {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 20px;
-  justify-content: space-between;
+.btn:hover {
+  opacity: 0.6;
 }
-.side-a,
-.side-b {
-  position: absolute;
-  backface-visibility: hidden;
-}
-.side-a {
-  z-index: 1; /*to prioritize the first div*/
-}
-.side-b {
-  transform: rotateY(
-    180deg
-  ); /*so that this div does not appear with first side*/
+/* footer section */
+footer {
+  background: #111;
+  padding: 15px 23px;
+  color: #fff;
   text-align: center;
-  font-size: 30px;
 }
-.wrap1:hover {
-  transform: rotateY(180deg);
-  cursor: pointer;
+footer span a {
+  color: crimson;
+  text-decoration: none;
 }
-.wrap1 {
-  transition: 1s;
-  transform-style: preserve-3d;
+footer span a:hover {
+  text-decoration: underline;
 }
-.skill {
-  width: 230px;
-  height: 230px;
-  margin: 0px auto;
-  border-radius: 50%;
+/*contact form*/
+.formdesign input {
+  width: 300px;
+  padding: 12px 20px;
+  border: 1px solid blue;
+  margin: 14px;
+  border-radius: 4px;
+  font-size: 15px;
 }
-.float {
-  float: left; /*to align this in left side and move out from the normal flow*/
-  margin-top: 40px;
-  margin-left: 40px;
-  margin-right: 350px;
+.left_set {
+  float: left;
+}
+.formerror {
+  color: red;
 }

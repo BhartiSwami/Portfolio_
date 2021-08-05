@@ -6,53 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            font-size: 28px;
+            font-weight: 700;
+        }
+        body {
+            background-image: url(./images/img_bg3.jpg);
+        }
+    </style>
 </head>
 <body>
-    <div class="form" style="margin-top: 20px; margin-bottom: 20px;">
-        <form style="background-color: rgb(252, 189, 189);font-size: 20px;font-weight: 500;">
-            <fieldset>
-                <legend style="text-align: center; font-size: 30px;font-weight: 500;">Enter Your Details</legend>
-                <div class="float">
-                    <b><label for="name">Name: </label></b>
-                    <input type="text" name="name" required><br><br>
-                    <b><label for="contact number">Contact Number: </label></b>
-                    <input type="number" name="contact number" required><br><br>
-                    <b><label for="email">Mail Id </label></b>
-                    <input type="email" name="email" required><br><br><b><label for="dob">Date of Birth </label></b>
-                <input type="date" name="dob" required><br><br>
-                <b><label for="radio">Gender </label></b><br>
-                <input type="radio" name="gender" value="male">Male<br>
-                <input type="radio" name="gender" value="female">Female<br>
-                <input type="radio" name="gender" value="other">Other<br><br>
-                <b> <label for="checkbox">You are Connected with me on.. </label><br></b>
-                <input type="checkbox" name="connection" value="linkdin">Linkdin</input><br>
-                <input type="checkbox" name="connection" value="github">Github</input><br>
-                <input type="checkbox" name="connection" value="instagram">Instagram</input><br>
-                <input type="checkbox" name="connection" value="twitter">Twitter</input><br>
-                <input type="checkbox" name="connection" value="facebook">Facebook</input><br>
-                <input type="checkbox" name="connection" value="telegram">Telegram</input><br><br>
-               </div>
-               <div  style="margin-top: 40px;">
-                <b><label for="drange">Rate yourself in Smartness</label></b><br>
+    <form name="myForm" onsubmit="return validateForm()" method="post">
+        <div class="left_set">
+            <div class="formdesign" id="name">
+                Name: <input type="text" name="fname" required><b><span class="formerror"> </span></b>
+            </div>
+            <div class="formdesign" id="email">
+                Email: <input type="email" name="femail" required><b><span class="formerror"> </span></b>
+            </div>
+            <div class="formdesign" id="phone">
+                Phone: <input type="phone" name="fphone" required><b><span class="formerror"></span></b>
+            </div>
+            <div class="formdesign" id="pass">
+                Password: <input type="password" name="fpass" required><b><span class="formerror" </span></b>
+            </div>
+            <div class="formdesign" id="cpass">
+                Confirm Password: <input type="password" name="fcpass" required><b><span class="formerror"></span></b>
+            </div>
+            <b>
+                <div class="formdesign">Gender </div>
+            </b><br>
+            <input type="radio" name="gender" value="male">Male<br>
+            <input type="radio" name="gender" value="female">Female<br>
+            <input type="radio" name="gender" value="other">Other<br><br>
+        </div>
+        <div style="margin-left: 55%;">
+            <b>
+                <div class="formdesign">You are Connected with me on.. </div><br>
+            </b>
+            <input type="checkbox" name="connection" value="linkdin">Linkdin</input><br>
+            <input type="checkbox" name="connection" value="github">Github</input><br>
+            <input type="checkbox" name="connection" value="instagram">Instagram</input><br>
+            <input type="checkbox" name="connection" value="twitter">Twitter</input><br>
+            <input type="checkbox" name="connection" value="facebook">Facebook</input><br>
+            <input type="checkbox" name="connection" value="telegram">Telegram</input>
+            <div style="margin-top: 20px;">
+                <b>
+                    <div class="formdesign">Rate yourself in Smartness</div>
+                </b><br>
                 <input type="range" name="rate" required><br><br>
-    
-                <b> <label for="select">Marital Status </label><br></b>
-                <select>
-                    <option value="single">Single</option>
-                    <option value="married">Married</option>
-                    <option value="divorced">Divorced</option>
-                    <option value="widowed">Widowed</option>
-                </select><br><br>
-    
-                <b> <label for="color">Favourite Color </label><br></b>
-                <input type="color"><br><br>
-                <b> <label for="color">Password</label><br></b>
-                <input type="password">
-                <br><br><br>
-                <input type=submit>
-                </div>
-            </fieldset>
-        </form>
+            </div>
+            <b>
+                <ldiv class="formdesign">Marital Status </ldiv><br>
+            </b>
+            <select>
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+                <option value="divorced">Divorced</option>
+                <option value="widowed">Widowed</option>
+            </select><br><br>
+        </div>
+        <b>
+            <div class="formdesign" style="margin-left: 55%;">Favourite Color </div><br>
+        </b>
+        <input type="color" style="margin-left: 55%;">
+        <br><br><br>
+        <input class="but" type="submit" style="margin-left: 40%; color: whitesmoke; background-color: crimson;"
+            value="Submit">
+    </form>
     </div>
+    <script src="index.js"></script>
 </body>
+
 </html>
